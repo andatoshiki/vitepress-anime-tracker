@@ -2,12 +2,12 @@ name: CI
 
 on:
   push:
-    branches:
-      - push
+    # branches:
+    #   - push
 
   pull_request:
-    branches:
-      - push
+    # branches:
+    #   - push
 
 jobs:
   ci:
