@@ -1,0 +1,267 @@
+@layer vitepress-anime-tracker {
+  :host {
+    display: block;
+    /* Base text color */
+    --vitepress-anime-tracker-text-base-color: #4c4948;
+    /* Label color */
+    --vitepress-anime-tracker-label-color: var(--vp-c-brand-1);
+    /* Underline, background, and other colors */
+    --vitepress-anime-tracker-primary-color: var(--vp-c-brand-1);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .vitepress-anime-tracker-tabs {
+    display: flex;
+    gap: 8px;
+  }
+
+  .vitepress-anime-tracker-tab-item {
+    padding: 4px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--vitepress-anime-tracker-text-base-color);
+    cursor: pointer;
+  }
+
+  .vitepress-anime-tracker-md-tab-item {
+    padding: 4px 12px;
+  }
+
+  .vitepress-anime-tracker-tab-item:hover {
+    background-color: var(--vitepress-anime-tracker-primary-color);
+    color: white;
+  }
+
+  .vitepress-anime-tracker-tab-item-active {
+    color: white;
+    background-color: var(--vitepress-anime-tracker-primary-color);
+  }
+
+  .vitepress-anime-tracker-header-platform {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .vitepress-anime-tracker-header-platform .divider {
+    width: 3px;
+    border-radius: 2px;
+    height: 32px;
+    background-color: var(--vitepress-anime-tracker-primary-color);
+  }
+
+  .vitepress-anime-tracker-bangumi:last-child {
+    border-bottom: none;
+  }
+
+  .vitepress-anime-tracker-bangumi-item {
+    display: flex;
+    margin: 12px 0;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .vitepress-anime-tracker-bangumi-item img {
+    border-radius: 8px;
+    cursor: pointer;
+    height: 140px;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+  }
+
+  .vitepress-anime-tracker-bangumi-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .vitepress-anime-tracker-bangumi-title {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .vitepress-anime-tracker-bangumi-title a {
+    color: var(--vitepress-anime-tracker-text-base-color);
+  }
+
+  .vitepress-anime-tracker-bangumi-title a:hover {
+    border-bottom: 2px solid var(--vitepress-anime-tracker-primary-color);
+  }
+
+  .vitepress-anime-tracker-bangumi-title small {
+    margin-left: 8px;
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--vitepress-anime-tracker-text-base-color);
+    height: 24px;
+  }
+
+  .vitepress-anime-tracker-bangumi-labels {
+    color: var(--vitepress-anime-tracker-label-color);
+    display: flex;
+  }
+
+  .vitepress-anime-tracker-bangumi-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    height: 36px;
+    font-size: 14px;
+    border-right: 1px solid var(--vitepress-anime-tracker-label-color);
+  }
+
+  .vitepress-anime-tracker-bangumi-label:last-child {
+    border-right: none;
+  }
+
+  .vitepress-anime-tracker-bangumi-label p {
+    margin: 0;
+    padding: 0 4px;
+  }
+
+  .vitepress-anime-tracker-bangumi-label:not(.vitepress-anime-tracker-bangumi-label > .vitepress-anime-tracker-bangumi-label-title) {
+    justify-content: center;
+  }
+
+  .vitepress-anime-tracker-md-label-text {
+    font-size: 12px;
+  }
+
+  .vitepress-anime-tracker-bangumi-summary {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: var(--vitepress-anime-tracker-text-base-color);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .vitepress-anime-tracker-pagination {
+    height: 40px;
+    text-align: center;
+    padding-right: 20px;
+  }
+
+  .vitepress-anime-tracker-pagination-button {
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin: 0 4px;
+    color: #bbb;
+    cursor: pointer;
+  }
+
+  .vitepress-anime-tracker-pagination-button:hover {
+    background-color: var(--vitepress-anime-tracker-primary-color);
+    color: white;
+  }
+
+  .vitepress-anime-tracker-pagination-pagenum {
+    color: #bbb;
+    font-size: 14px;
+  }
+  
+  .vitepress-anime-tracker-pagination-input {
+    display: inline-block;
+    color: #bbb;
+    font-size: 12px;
+  }
+
+  .vitepress-anime-tracker-pagination-input input {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 12px;
+    color: #bbb;
+    width: 30px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    text-align: center;
+    outline: none;
+    transition: border .2s ease;
+  }
+
+  .vitepress-anime-tracker-skeleton-container {
+    animation: skeleton-blink 1.2s ease-in-out infinite;
+  }
+
+  @keyframes skeleton-blink {
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  .vitepress-anime-tracker-skeleton-avatar {
+    height: 140px;
+    border-radius: 12px;
+    background-color: #f2f3f5;
+    aspect-ratio: 3 / 4;
+  }
+
+  .vitepress-anime-tracker-skeleton-row {
+    height: 24px;
+    border-radius: 8px;
+    background-color: #f2f3f5;
+  }
+
+  .vitepress-anime-tracker-empty {
+    display: flex;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vitepress-anime-tracker-empty img {
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .vitepress-anime-tracker-error {
+    margin: 20px 0;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vitepress-anime-tracker-error img {
+    display: block;
+    width: 260px;
+  }
+
+  .vitepress-anime-tracker-error p {
+    margin: 0;
+    color: var(--vitepress-anime-tracker-text-base-color);
+    font-size: 18px;
+  }
+
+  .dark {
+    bilibili-bangumi {
+      /* Base text color */
+      --vitepress-anime-tracker-text-base-color: #FFF;
+      /* Label color */
+      --vitepress-anime-tracker-label-color: var(--vp-c-brand-1);
+      /* Underline, background, and other colors */
+      --vitepress-anime-tracker-primary-color: var(--vp-c-brand-1);
+    }
+  }
+}

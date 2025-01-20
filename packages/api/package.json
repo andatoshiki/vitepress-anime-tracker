@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "type": "module",
+  "version": "0.0.1",
+  "private": false,
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "MOCK=true && tsup --watch",
+    "build": "tsup",
+    "build:mock": "tsup --env.MOCK"
+  },
+  "devDependencies": {
+  }
+}

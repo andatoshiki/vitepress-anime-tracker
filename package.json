@@ -1,0 +1,52 @@
+{
+  "name": "@andatoshiki/vitepress-anime-tracker/monorepo",
+  "type": "module",
+  "version": "0.0.1",
+  "private": false,
+  "packageManager": "pnpm@9.6.0",
+  "description": "Web component plugin of Vitepress for showcasing a list of tracked Anime similar to myanimelist!",
+  "author": "andatoshiki",
+  "email": "hello@toshiki.dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andatoshiki/vitepress-anime-tracker"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev:vercel": "vercel dev",
+    "dev:api": "pnpm --filter api run dev",
+    "dev:lib": "pnpm --filter vitepress-anime-tracker run dev",
+    "build:lib": "pnpm --filter vitepress-anime-tracker run build",
+    "build:api": "pnpm --filter api run build",
+    "build:mock": "pnpm --filter api run build:mock",
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint .",
+    "generate": "pnpm --filter vitepress-anime-tracker run generate",
+    "test": "vitest run",
+    "ts-check:lib": "pnpm --filter vitepress-anime-tracker run ts-check",
+    "ci:publish": "pnpm -r publish --access public --no-git-checks",
+    "pre-commit": "lint-staged --allow-empty"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
+    "@types/node": "20",
+    "@vercel/node": "^3.0.17",
+    "eslint": "^8.56.0",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vercel": "^37.3.0",
+    "vitest": "^1.2.1"
+  },
+  "lint-staged": {
+    "**/*.{tsx,ts,md,json}": [
+      "eslint . --fix"
+    ]
+  }
+}
