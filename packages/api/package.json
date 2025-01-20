@@ -7,9 +7,6 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "main": "index.js",
   "scripts": {
     "dev": "MOCK=true && tsup --watch",
