@@ -4,10 +4,6 @@
   "description": "Web component plugin of Vitepress for showcasing a list of tracked Anime similar to myanimelist!",
   "license": "MIT",
   "homepage": "https://github.com/andatoshiki/vitepress-anime-tracker#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/andatoshiki/vitepress-anime-tracker"
-  },
   "keywords": ["Bilibili", "Bangumi", "WebComponent", "vitepress"],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
