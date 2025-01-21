@@ -35,7 +35,7 @@ jobs:
       - run: pnpm run ci:publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_CONFIG_PROVENANCE: true
+          NPM_CONFIG_PROVENANCE: false
 
       # - run: npx changelogithub
       #   env:
